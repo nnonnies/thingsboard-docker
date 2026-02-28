@@ -1,0 +1,55 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "99875e10-8670-11f0-9729-d17c6bb9591b"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "7f9666b0-0db9-11f1-8efd-f3be4aec29b6"
+    },
+    "label" : null,
+    "name" : "ชั้น ตัวอย่าง test",
+    "type" : "Floors"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "21d69c90-82c0-11f0-8320-a5effcba47d0"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "7f9666b0-0db9-11f1-8efd-f3be4aec29b6"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 3833
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "7f9666b0-0db9-11f1-8efd-f3be4aec29b6"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "a118f660-0b46-11f1-8efd-f3be4aec29b6"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 3832
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}

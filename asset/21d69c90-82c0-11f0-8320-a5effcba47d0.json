@@ -1,0 +1,143 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "8b07aac0-8670-11f0-9729-d17c6bb9591b"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "962f14c0-991b-11f0-bc00-9bbeaf642c16"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "21d69c90-82c0-11f0-8320-a5effcba47d0"
+    },
+    "label" : "",
+    "name" : "ตึกวิศวกรรมศาสตร์",
+    "type" : "Buildings"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "21d69c90-82c0-11f0-8320-a5effcba47d0"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "7f9666b0-0db9-11f1-8efd-f3be4aec29b6"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 3833
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "buildingImage",
+      "lastUpdateTs" : 1756337469444,
+      "longValue" : null,
+      "strValue" : "/api/images/public/YZdO3sIynAXc5rcFmeZ3WkTTq4gX6AKV"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 13.727633469037013,
+      "jsonValue" : null,
+      "key" : "latitude",
+      "lastUpdateTs" : 1756335350279,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 100.77240882185495,
+      "jsonValue" : null,
+      "key" : "longitude",
+      "lastUpdateTs" : 1756335695507,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "temp_count",
+      "lastUpdateTs" : 1771965396419,
+      "longValue" : 2,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "totalFloors",
+      "lastUpdateTs" : 1757875522836,
+      "longValue" : 4,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "total_current_a",
+      "lastUpdateTs" : 1771965395401,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 59616.18754544,
+      "jsonValue" : null,
+      "key" : "total_energy_kwh",
+      "lastUpdateTs" : 1772006004827,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "total_power_w",
+      "lastUpdateTs" : 1771965396203,
+      "longValue" : 0,
+      "strValue" : null
+    } ]
+  },
+  "calculatedFields" : [ {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "CO2" : {
+          "defaultValue" : "",
+          "refEntityId" : {
+            "entityType" : "ASSET",
+            "id" : "21d69c90-82c0-11f0-8320-a5effcba47d0"
+          },
+          "refEntityKey" : {
+            "key" : "total_energy_kwh",
+            "scope" : "SERVER_SCOPE",
+            "type" : "ATTRIBUTE"
+          }
+        }
+      },
+      "expression" : "CO2*0.5986",
+      "output" : {
+        "decimalsByDefault" : 2,
+        "name" : "CO2",
+        "type" : "TIME_SERIES"
+      },
+      "useLatestTs" : false
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1762252142478,
+      "failuresEnabled" : true
+    },
+    "name" : "CO2",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "608165c0-81fc-11f0-b4e8-c3dcfa6424a6"
+    },
+    "type" : "SIMPLE"
+  } ]
+}

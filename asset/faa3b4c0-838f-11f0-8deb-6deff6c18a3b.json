@@ -1,0 +1,82 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "8b07aac0-8670-11f0-9729-d17c6bb9591b"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "962f14c0-991b-11f0-bc00-9bbeaf642c16"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "faa3b4c0-838f-11f0-8deb-6deff6c18a3b"
+    },
+    "label" : null,
+    "name" : "ตึกพระจอมเกล้าฯ",
+    "type" : "Buildings"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : 13.729034960397131,
+      "jsonValue" : null,
+      "key" : "latitude",
+      "lastUpdateTs" : 1756337601437,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 100.78010694165572,
+      "jsonValue" : null,
+      "key" : "longitude",
+      "lastUpdateTs" : 1756337623907,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  },
+  "calculatedFields" : [ {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "CO2" : {
+          "defaultValue" : "",
+          "refEntityId" : {
+            "entityType" : "ASSET",
+            "id" : "21d69c90-82c0-11f0-8320-a5effcba47d0"
+          },
+          "refEntityKey" : {
+            "key" : "total_energy_kwh",
+            "scope" : "SERVER_SCOPE",
+            "type" : "ATTRIBUTE"
+          }
+        }
+      },
+      "expression" : "CO*0.5986",
+      "output" : {
+        "decimalsByDefault" : 2,
+        "name" : "CO2",
+        "type" : "TIME_SERIES"
+      },
+      "useLatestTs" : false
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1762252027181,
+      "failuresEnabled" : true
+    },
+    "name" : "Co2",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "608165c0-81fc-11f0-b4e8-c3dcfa6424a6"
+    },
+    "type" : "SIMPLE"
+  } ]
+}

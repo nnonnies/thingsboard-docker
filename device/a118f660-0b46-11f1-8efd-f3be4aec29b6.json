@@ -1,0 +1,182 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "lastConnectedGateway" : "69675c00-0b1b-11f1-8efd-f3be4aec29b6"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "260faaf0-8387-11f0-8deb-6deff6c18a3b"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "a118f660-0b46-11f1-8efd-f3be4aec29b6"
+    },
+    "label" : "MeterTest",
+    "name" : "0000741fa8bbbc2c",
+    "softwareId" : null,
+    "type" : "EnergyMeter"
+  },
+  "credentials" : {
+    "credentialsId" : "v9tg6NfBOInDDFA1UBaI",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "69675c00-0b1b-11f1-8efd-f3be4aec29b6"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "a118f660-0b46-11f1-8efd-f3be4aec29b6"
+    },
+    "type" : "Created",
+    "typeGroup" : "COMMON",
+    "version" : 3831
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "7f9666b0-0db9-11f1-8efd-f3be4aec29b6"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "a118f660-0b46-11f1-8efd-f3be4aec29b6"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 3832
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1772278701168,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1772229884889,
+      "longValue" : 1772229884889,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1772295253166,
+      "longValue" : 1772295252137,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1772278701168,
+      "longValue" : 1772278701168,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1772229283930,
+      "longValue" : 1772229283930,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "E_Con" : {
+          "defaultValue" : "",
+          "refEntityId" : {
+            "entityType" : "DEVICE",
+            "id" : "a118f660-0b46-11f1-8efd-f3be4aec29b6"
+          },
+          "refEntityKey" : {
+            "key" : "Energy_consumption",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "E_Con*0.5986",
+      "output" : {
+        "decimalsByDefault" : 6,
+        "name" : "Co2_Emission",
+        "type" : "TIME_SERIES"
+      },
+      "useLatestTs" : false
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1772265667769,
+      "failuresEnabled" : true
+    },
+    "name" : "Co2_Emission",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "608165c0-81fc-11f0-b4e8-c3dcfa6424a6"
+    },
+    "type" : "SIMPLE"
+  }, {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "E_kWh" : {
+          "defaultValue" : "",
+          "refEntityId" : {
+            "entityType" : "DEVICE",
+            "id" : "a118f660-0b46-11f1-8efd-f3be4aec29b6"
+          },
+          "refEntityKey" : {
+            "key" : "energy_kwh",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "E_kWh*4.5",
+      "output" : {
+        "name" : "E_charge",
+        "type" : "TIME_SERIES"
+      },
+      "useLatestTs" : false
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1772267855928,
+      "failuresEnabled" : true
+    },
+    "name" : "Electricity charge",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "608165c0-81fc-11f0-b4e8-c3dcfa6424a6"
+    },
+    "type" : "SIMPLE"
+  } ]
+}
