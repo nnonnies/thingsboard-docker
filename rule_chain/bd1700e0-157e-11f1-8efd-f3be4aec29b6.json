@@ -1,0 +1,566 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "1ede48b0-157f-11f1-8efd-f3be4aec29b6"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "bd1700e0-157e-11f1-8efd-f3be4aec29b6"
+    },
+    "name" : "test meter",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 6,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 5,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 2,
+      "type" : "True"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 7,
+      "type" : "True"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 8,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 11,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 13,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 9,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 0,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 85,
+        "layoutY" : 235
+      },
+      "configuration" : {
+        "originatorSource" : "RELATED",
+        "entityType" : null,
+        "entityNamePattern" : null,
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : true,
+          "direction" : "TO",
+          "maxLevel" : "1",
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ "ASSET" ]
+          } ]
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1772381141606,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1ede48b0-157f-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "Get Parent test meter",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 92,
+        "layoutY" : 334
+      },
+      "configuration" : {
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        },
+        "defaultTTL" : 0,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1ede48b1-157f-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "Save power&energy to Floor",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 347,
+        "layoutY" : 324
+      },
+      "configuration" : {
+        "originatorSource" : "ENTITY",
+        "entityType" : "ASSET",
+        "entityNamePattern" : "E12_Floor_2",
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : true,
+          "direction" : "TO",
+          "maxLevel" : "1",
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : null
+          } ]
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "63b68e80-1588-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "Get Parent E12_Floor_2",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 451,
+        "layoutY" : 531
+      },
+      "configuration" : {
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        },
+        "defaultTTL" : 0,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "63b68e81-1588-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "Save power&energy to Floor",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 646,
+        "layoutY" : 350
+      },
+      "configuration" : {
+        "latestTsKeyNames" : [ "meters_power_state", "meters_energy_state" ],
+        "aggregation" : "NONE",
+        "fetchMode" : "LAST",
+        "orderBy" : "ASC",
+        "limit" : 1000,
+        "useMetadataIntervalPatterns" : false,
+        "startIntervalPattern" : "",
+        "endIntervalPattern" : "",
+        "startInterval" : 2,
+        "startIntervalTimeUnit" : "MINUTES",
+        "endInterval" : 1,
+        "endIntervalTimeUnit" : "MINUTES"
+      },
+      "configurationVersion" : 2,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "63b6b591-1588-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "Pull last status of floor",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 615,
+        "layoutY" : 450
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var device = metadata.deviceName;\r\nvar newMsg = {};\r\n\r\n// ฟังก์ชันแกะกล่องป้องกันข้อมูลพัง\r\nfunction safeParse(jsonStr) {\r\n    var obj = {};\r\n    if (jsonStr) {\r\n        try {\r\n            var parsed = JSON.parse(jsonStr);\r\n            while (typeof parsed === 'string') { parsed = JSON.parse(parsed); }\r\n            if (typeof parsed === 'object' && parsed !== null) { obj = parsed; }\r\n        } catch(e) {}\r\n    }\r\n    return obj;\r\n}\r\n\r\nvar powerState = safeParse(metadata.meters_power_state);\r\nvar energyState = safeParse(metadata.meters_energy_state);\r\n\r\n// 1. จัดการ Power (รวมยอดชั้น)\r\nif (msg.power_total !== undefined && msg.power_total !== null && msg.power_total !== \"\") {\r\n    powerState[device] = Number(msg.power_total) || 0;\r\n    var totalPower = 0;\r\n    for (var m in powerState) { totalPower += Number(powerState[m]) || 0; }\r\n    newMsg.meters_power_state = JSON.stringify(powerState);\r\n    newMsg.power_total_floor = totalPower;\r\n}\r\n\r\n// 2. จัดการ Energy (รวมยอดชั้น)\r\nif (msg.energy_kwh !== undefined && msg.energy_kwh !== null && msg.energy_kwh !== \"\") {\r\n    energyState[device] = Number(msg.energy_kwh) || 0;\r\n    var totalEnergy = 0;\r\n    for (var n in energyState) { totalEnergy += Number(energyState[n]) || 0; }\r\n    newMsg.meters_energy_state = JSON.stringify(energyState);\r\n    newMsg.energy_kwh_floor = totalEnergy;\r\n}\r\n\r\n// 3. รับค่า Consumption จากมิเตอร์ตรงๆ มาคำนวณ CO2 และเซฟลงตึกชั้นเลย!\r\nif (msg.Energy_consumption !== undefined && msg.Energy_consumption !== null) {\r\n    newMsg.Energy_consumption = Number(msg.Energy_consumption);\r\n    newMsg.CO2 = newMsg.Energy_consumption * 0.5986;\r\n}\r\n\r\nreturn {msg: newMsg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "// 1. ดึงข้อมูลสถานะล่าสุดของมิเตอร์ทุกตัวในชั้น (จากที่ดึงมาในขั้นที่ 2)\r\nvar state = {};\r\nif (metadata.meters_state_json) {\r\n    try { \r\n        state = JSON.parse(metadata.meters_state_json); \r\n    } catch(e) {}\r\n}\r\n\r\n// 2. อัปเดตข้อมูลเฉพาะมิเตอร์ตัวที่เพิ่งส่งข้อมูลเข้ามา (ระบบดึง Device Name ให้อัตโนมัติ)\r\nstate[metadata.deviceName] = {\r\n    power: parseFloat(msg.power_total) || 0,\r\n    energy: parseFloat(msg.energy_kWh) || 0\r\n};\r\n\r\n// 3. วนลูปคำนวณผลรวมพลังงานของมิเตอร์ \"ทุกตัว\" ในชั้นนี้\r\nvar totalPower = 0;\r\nvar totalEnergy = 0;\r\nfor (var meter in state) {\r\n    totalPower += state[meter].power;\r\n    totalEnergy += state[meter].energy;\r\n}\r\n\r\n// 5. สร้าง Message ใหม่เพื่อบันทึกผลลัพธ์\r\nvar newMsg = {\r\n    meters_state_json: JSON.stringify(state), // ซ่อนค่าแยกมิเตอร์ไว้ในตัวแปรนี้เพื่อใช้คำนวณรอบหน้า\r\n    power_total_floor: totalPower,\r\n    energy_kWh_floor: totalEnergy,\r\n};\r\n\r\nreturn {msg: newMsg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "63b6b592-1588-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "Calc total of P and E",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 86,
+        "layoutY" : 424
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "// เช็คว่ามีตัวแปรส่งมาจริง และค่าต้องไม่ใช่ null และไม่ใช่ข้อความว่าง \"\"\r\nvar hasPower = msg.hasOwnProperty('power_total') && msg.power_total !== null && msg.power_total !== \"\";\r\nvar hasEnergy = msg.hasOwnProperty('energy_kwh') && msg.energy_kwh !== null && msg.energy_kwh !== \"\";\r\n\r\nreturn hasPower || hasEnergy;",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "63b6b593-1588-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "Check Energy Data",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 337,
+        "layoutY" : 430
+      },
+      "configuration" : {
+        "originatorSource" : "ENTITY",
+        "entityType" : "ASSET",
+        "entityNamePattern" : "E12_Floor_1",
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : true,
+          "direction" : "TO",
+          "maxLevel" : "1",
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : null
+          } ]
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "63b6dca0-1588-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "Get Parent E12_Floor_1",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 898,
+        "layoutY" : 375
+      },
+      "configuration" : {
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        },
+        "defaultTTL" : 0,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "678cf570-1589-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "Save to Building",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 961,
+        "layoutY" : 598
+      },
+      "configuration" : {
+        "latestTsKeyNames" : [ "floors_power_state", "floors_energy_state" ],
+        "aggregation" : "NONE",
+        "fetchMode" : "LAST",
+        "orderBy" : "ASC",
+        "limit" : 1000,
+        "useMetadataIntervalPatterns" : false,
+        "startIntervalPattern" : "",
+        "endIntervalPattern" : "",
+        "startInterval" : 2,
+        "startIntervalTimeUnit" : "MINUTES",
+        "endInterval" : 1,
+        "endIntervalTimeUnit" : "MINUTES"
+      },
+      "configurationVersion" : 2,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "678d1c80-1589-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "Pull last status of building",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 900,
+        "layoutY" : 484
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var floor = metadata.floorName;\r\nvar newMsg = {};\r\n\r\nfunction safeParse(jsonStr) {\r\n    var obj = {};\r\n    if (jsonStr) {\r\n        try {\r\n            var parsed = JSON.parse(jsonStr);\r\n            while (typeof parsed === 'string') { parsed = JSON.parse(parsed); }\r\n            if (typeof parsed === 'object' && parsed !== null) { obj = parsed; }\r\n        } catch(e) {}\r\n    }\r\n    return obj;\r\n}\r\n\r\nvar powerState = safeParse(metadata.floors_power_state);\r\nvar energyState = safeParse(metadata.floors_energy_state);\r\n\r\n// 1. รวม Power ของทุกชั้นในตึก\r\nif (msg.power_total_floor !== undefined && msg.power_total_floor !== null && msg.power_total_floor !== \"\") {\r\n    powerState[floor] = Number(msg.power_total_floor) || 0;\r\n    var totalPower = 0;\r\n    for (var f in powerState) { totalPower += Number(powerState[f]) || 0; }\r\n    newMsg.floors_power_state = JSON.stringify(powerState);\r\n    newMsg.power_total_building = totalPower;\r\n}\r\n\r\n// 2. รวม Energy สะสมของทุกชั้นในตึก\r\nif (msg.energy_kwh_floor !== undefined && msg.energy_kwh_floor !== null && msg.energy_kwh_floor !== \"\") {\r\n    energyState[floor] = Number(msg.energy_kwh_floor) || 0;\r\n    var totalEnergy = 0;\r\n    for (var f in energyState) { totalEnergy += Number(energyState[f]) || 0; }\r\n    newMsg.floors_energy_state = JSON.stringify(energyState);\r\n    newMsg.energy_kwh_building = totalEnergy;\r\n}\r\n\r\n// 3. โยนค่า Consumption และ CO2 เข้ากระปุกของตึกตรงๆ เลย!\r\nif (msg.Energy_consumption !== undefined && msg.Energy_consumption !== null) {\r\n    newMsg.Energy_consumption = Number(msg.Energy_consumption);\r\n    if (msg.CO2 !== undefined && msg.CO2 !== null) {\r\n        newMsg.CO2 = Number(msg.CO2);\r\n    }\r\n}\r\n\r\nreturn {msg: newMsg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "// 1. ดึงข้อมูลสถานะล่าสุดของมิเตอร์ทุกตัวในชั้น (จากที่ดึงมาในขั้นที่ 2)\r\nvar state = {};\r\nif (metadata.meters_state_json) {\r\n    try { \r\n        state = JSON.parse(metadata.meters_state_json); \r\n    } catch(e) {}\r\n}\r\n\r\n// 2. อัปเดตข้อมูลเฉพาะมิเตอร์ตัวที่เพิ่งส่งข้อมูลเข้ามา (ระบบดึง Device Name ให้อัตโนมัติ)\r\nstate[metadata.deviceName] = {\r\n    power: parseFloat(msg.power_total) || 0,\r\n    energy: parseFloat(msg.energy_kWh) || 0\r\n};\r\n\r\n// 3. วนลูปคำนวณผลรวมพลังงานของมิเตอร์ \"ทุกตัว\" ในชั้นนี้\r\nvar totalPower = 0;\r\nvar totalEnergy = 0;\r\nfor (var meter in state) {\r\n    totalPower += state[meter].power;\r\n    totalEnergy += state[meter].energy;\r\n}\r\n\r\n// 5. สร้าง Message ใหม่เพื่อบันทึกผลลัพธ์\r\nvar newMsg = {\r\n    meters_state_json: JSON.stringify(state), // ซ่อนค่าแยกมิเตอร์ไว้ในตัวแปรนี้เพื่อใช้คำนวณรอบหน้า\r\n    power_total_floor: totalPower,\r\n    energy_kWh_floor: totalEnergy,\r\n};\r\n\r\nreturn {msg: newMsg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "678d1c81-1589-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "Calc total of P,E,CO2",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 678,
+        "layoutY" : 646
+      },
+      "configuration" : {
+        "originatorSource" : "ENTITY",
+        "entityType" : "ASSET",
+        "entityNamePattern" : "ตึกวิศวกรรมศาสตร์",
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ "ASSET" ]
+          } ]
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "678d1c82-1589-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "Change to ตึกวิศวกรรมศาสตร์",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 446,
+        "layoutY" : 616
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "metadata.floorName = metadata.assetName || metadata.originatorName;\r\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "metadata.floorName = metadata.assetName || metadata.originatorName;\r\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "678d4390-1589-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "Save Floor Name",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 703,
+        "layoutY" : 540
+      },
+      "configuration" : {
+        "originatorSource" : "ENTITY",
+        "entityType" : "ASSET",
+        "entityNamePattern" : "ตึกพระจอมเกล้าฯ",
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ "ASSET" ]
+          } ]
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "678d4391-1589-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "Change to ตึกพระจอมเกล้าฯ",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "60e3f820-81fc-11f0-b4e8-c3dcfa6424a6"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "bd1700e0-157e-11f1-8efd-f3be4aec29b6"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 8033
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
