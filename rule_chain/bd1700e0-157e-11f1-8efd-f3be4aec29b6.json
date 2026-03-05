@@ -30,7 +30,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 4,
+      "toIndex" : 14,
       "type" : "Success"
     }, {
       "fromIndex" : 3,
@@ -78,6 +78,14 @@
       "type" : "Success"
     }, {
       "fromIndex" : 13,
+      "toIndex" : 15,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 15,
       "toIndex" : 9,
       "type" : "Success"
     } ],
@@ -85,8 +93,8 @@
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 85,
-        "layoutY" : 235
+        "layoutX" : 352,
+        "layoutY" : 152
       },
       "configuration" : {
         "originatorSource" : "RELATED",
@@ -122,8 +130,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 92,
-        "layoutY" : 334
+        "layoutX" : 353,
+        "layoutY" : 256
       },
       "configuration" : {
         "processingSettings" : {
@@ -152,8 +160,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 347,
-        "layoutY" : 324
+        "layoutX" : 349,
+        "layoutY" : 363
       },
       "configuration" : {
         "originatorSource" : "ENTITY",
@@ -189,8 +197,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 451,
-        "layoutY" : 531
+        "layoutX" : 367,
+        "layoutY" : 595
       },
       "configuration" : {
         "processingSettings" : {
@@ -219,8 +227,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 646,
-        "layoutY" : 350
+        "layoutX" : 669,
+        "layoutY" : 452
       },
       "configuration" : {
         "latestTsKeyNames" : [ "meters_power_state", "meters_energy_state" ],
@@ -256,12 +264,12 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 615,
-        "layoutY" : 450
+        "layoutX" : 73,
+        "layoutY" : 591
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var device = metadata.deviceName;\r\nvar newMsg = {};\r\n\r\n// ฟังก์ชันแกะกล่องป้องกันข้อมูลพัง\r\nfunction safeParse(jsonStr) {\r\n    var obj = {};\r\n    if (jsonStr) {\r\n        try {\r\n            var parsed = JSON.parse(jsonStr);\r\n            while (typeof parsed === 'string') { parsed = JSON.parse(parsed); }\r\n            if (typeof parsed === 'object' && parsed !== null) { obj = parsed; }\r\n        } catch(e) {}\r\n    }\r\n    return obj;\r\n}\r\n\r\nvar powerState = safeParse(metadata.meters_power_state);\r\nvar energyState = safeParse(metadata.meters_energy_state);\r\n\r\n// 1. จัดการ Power (รวมยอดชั้น)\r\nif (msg.power_total !== undefined && msg.power_total !== null && msg.power_total !== \"\") {\r\n    powerState[device] = Number(msg.power_total) || 0;\r\n    var totalPower = 0;\r\n    for (var m in powerState) { totalPower += Number(powerState[m]) || 0; }\r\n    newMsg.meters_power_state = JSON.stringify(powerState);\r\n    newMsg.power_total_floor = totalPower;\r\n}\r\n\r\n// 2. จัดการ Energy (รวมยอดชั้น)\r\nif (msg.energy_kwh !== undefined && msg.energy_kwh !== null && msg.energy_kwh !== \"\") {\r\n    energyState[device] = Number(msg.energy_kwh) || 0;\r\n    var totalEnergy = 0;\r\n    for (var n in energyState) { totalEnergy += Number(energyState[n]) || 0; }\r\n    newMsg.meters_energy_state = JSON.stringify(energyState);\r\n    newMsg.energy_kwh_floor = totalEnergy;\r\n}\r\n\r\n// 3. รับค่า Consumption จากมิเตอร์ตรงๆ มาคำนวณ CO2 และเซฟลงตึกชั้นเลย!\r\nif (msg.Energy_consumption !== undefined && msg.Energy_consumption !== null) {\r\n    newMsg.Energy_consumption = Number(msg.Energy_consumption);\r\n    newMsg.CO2 = newMsg.Energy_consumption * 0.5986;\r\n}\r\n\r\nreturn {msg: newMsg, metadata: metadata, msgType: msgType};",
+        "jsScript" : "var device = metadata.deviceName;\r\nvar newMsg = {};\r\n\r\n// ฟังก์ชันแกะกล่องป้องกันข้อมูลพัง\r\nfunction safeParse(jsonStr) {\r\n    var obj = {};\r\n    if (jsonStr) {\r\n        try {\r\n            var parsed = JSON.parse(jsonStr);\r\n            while (typeof parsed === 'string') { parsed = JSON.parse(parsed); }\r\n            if (typeof parsed === 'object' && parsed !== null) { obj = parsed; }\r\n        } catch(e) {}\r\n    }\r\n    return obj;\r\n}\r\n\r\nvar powerState = safeParse(metadata.meters_power_state);\r\nvar energyState = safeParse(metadata.meters_energy_state);\r\n\r\n// 1. จัดการ Power (รวมยอดชั้น)\r\nif (msg.power_total !== undefined && msg.power_total !== null && msg.power_total !== \"\") {\r\n    powerState[device] = Number(msg.power_total) || 0;\r\n    var totalPower = 0;\r\n    for (var m in powerState) { totalPower += Number(powerState[m]) || 0; }\r\n    newMsg.meters_power_state = JSON.stringify(powerState);\r\n    newMsg.power_total_floor = totalPower;\r\n}\r\n\r\n// 2. จัดการ Energy (รวมยอดชั้น)\r\nif (msg.energy_kwh !== undefined && msg.energy_kwh !== null && msg.energy_kwh !== \"\") {\r\n    energyState[device] = Number(msg.energy_kwh) || 0;\r\n    var totalEnergy = 0;\r\n    for (var n in energyState) { totalEnergy += Number(energyState[n]) || 0; }\r\n    newMsg.meters_energy_state = JSON.stringify(energyState);\r\n    newMsg.energy_kwh_floor = totalEnergy;\r\n}\r\n\r\n// 3. รับค่า Consumption จากมิเตอร์ตรงๆ มาคำนวณ CO2 และเซฟลงตึกชั้นเลย!\r\nif (msg.Energy_consumption !== undefined && msg.Energy_consumption !== null) {\r\n    newMsg.Energy_consumption = Number(msg.Energy_consumption);\r\n    newMsg.CO2 = newMsg.Energy_consumption * 0.5986;\r\n    newMsg.E_charge = newMsg.Energy_consumption * 4.5;\r\n}\r\n\r\nreturn {msg: newMsg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "// 1. ดึงข้อมูลสถานะล่าสุดของมิเตอร์ทุกตัวในชั้น (จากที่ดึงมาในขั้นที่ 2)\r\nvar state = {};\r\nif (metadata.meters_state_json) {\r\n    try { \r\n        state = JSON.parse(metadata.meters_state_json); \r\n    } catch(e) {}\r\n}\r\n\r\n// 2. อัปเดตข้อมูลเฉพาะมิเตอร์ตัวที่เพิ่งส่งข้อมูลเข้ามา (ระบบดึง Device Name ให้อัตโนมัติ)\r\nstate[metadata.deviceName] = {\r\n    power: parseFloat(msg.power_total) || 0,\r\n    energy: parseFloat(msg.energy_kWh) || 0\r\n};\r\n\r\n// 3. วนลูปคำนวณผลรวมพลังงานของมิเตอร์ \"ทุกตัว\" ในชั้นนี้\r\nvar totalPower = 0;\r\nvar totalEnergy = 0;\r\nfor (var meter in state) {\r\n    totalPower += state[meter].power;\r\n    totalEnergy += state[meter].energy;\r\n}\r\n\r\n// 5. สร้าง Message ใหม่เพื่อบันทึกผลลัพธ์\r\nvar newMsg = {\r\n    meters_state_json: JSON.stringify(state), // ซ่อนค่าแยกมิเตอร์ไว้ในตัวแปรนี้เพื่อใช้คำนวณรอบหน้า\r\n    power_total_floor: totalPower,\r\n    energy_kWh_floor: totalEnergy,\r\n};\r\n\r\nreturn {msg: newMsg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
@@ -285,7 +293,7 @@
       "additionalInfo" : {
         "description" : "",
         "layoutX" : 86,
-        "layoutY" : 424
+        "layoutY" : 401
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -312,8 +320,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 337,
-        "layoutY" : 430
+        "layoutX" : 354,
+        "layoutY" : 450
       },
       "configuration" : {
         "originatorSource" : "ENTITY",
@@ -349,8 +357,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 898,
-        "layoutY" : 375
+        "layoutX" : 347,
+        "layoutY" : 893
       },
       "configuration" : {
         "processingSettings" : {
@@ -379,11 +387,11 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 961,
-        "layoutY" : 598
+        "layoutX" : 668,
+        "layoutY" : 749
       },
       "configuration" : {
-        "latestTsKeyNames" : [ "floors_power_state", "floors_energy_state" ],
+        "latestTsKeyNames" : [ "floors_power_state", "floors_energy_state", "floors_consumption_state" ],
         "aggregation" : "NONE",
         "fetchMode" : "LAST",
         "orderBy" : "ASC",
@@ -416,12 +424,12 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 900,
-        "layoutY" : 484
+        "layoutX" : 69,
+        "layoutY" : 889
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var floor = metadata.floorName;\r\nvar newMsg = {};\r\n\r\nfunction safeParse(jsonStr) {\r\n    var obj = {};\r\n    if (jsonStr) {\r\n        try {\r\n            var parsed = JSON.parse(jsonStr);\r\n            while (typeof parsed === 'string') { parsed = JSON.parse(parsed); }\r\n            if (typeof parsed === 'object' && parsed !== null) { obj = parsed; }\r\n        } catch(e) {}\r\n    }\r\n    return obj;\r\n}\r\n\r\nvar powerState = safeParse(metadata.floors_power_state);\r\nvar energyState = safeParse(metadata.floors_energy_state);\r\n\r\n// 1. รวม Power ของทุกชั้นในตึก\r\nif (msg.power_total_floor !== undefined && msg.power_total_floor !== null && msg.power_total_floor !== \"\") {\r\n    powerState[floor] = Number(msg.power_total_floor) || 0;\r\n    var totalPower = 0;\r\n    for (var f in powerState) { totalPower += Number(powerState[f]) || 0; }\r\n    newMsg.floors_power_state = JSON.stringify(powerState);\r\n    newMsg.power_total_building = totalPower;\r\n}\r\n\r\n// 2. รวม Energy สะสมของทุกชั้นในตึก\r\nif (msg.energy_kwh_floor !== undefined && msg.energy_kwh_floor !== null && msg.energy_kwh_floor !== \"\") {\r\n    energyState[floor] = Number(msg.energy_kwh_floor) || 0;\r\n    var totalEnergy = 0;\r\n    for (var f in energyState) { totalEnergy += Number(energyState[f]) || 0; }\r\n    newMsg.floors_energy_state = JSON.stringify(energyState);\r\n    newMsg.energy_kwh_building = totalEnergy;\r\n}\r\n\r\n// 3. โยนค่า Consumption และ CO2 เข้ากระปุกของตึกตรงๆ เลย!\r\nif (msg.Energy_consumption !== undefined && msg.Energy_consumption !== null) {\r\n    newMsg.Energy_consumption = Number(msg.Energy_consumption);\r\n    if (msg.CO2 !== undefined && msg.CO2 !== null) {\r\n        newMsg.CO2 = Number(msg.CO2);\r\n    }\r\n}\r\n\r\nreturn {msg: newMsg, metadata: metadata, msgType: msgType};",
+        "jsScript" : "var floor = metadata.floorName;\r\nvar newMsg = {};\r\n\r\nfunction safeParse(jsonStr) {\r\n    var obj = {};\r\n    if (jsonStr) {\r\n        try {\r\n            var parsed = JSON.parse(jsonStr);\r\n            while (typeof parsed === 'string') { parsed = JSON.parse(parsed); }\r\n            if (typeof parsed === 'object' && parsed !== null) { obj = parsed; }\r\n        } catch(e) {}\r\n    }\r\n    return obj;\r\n}\r\n\r\nvar powerState = safeParse(metadata.floors_power_state);\r\nvar energyState = safeParse(metadata.floors_energy_state);\r\n// 🌟 เพิ่ม State สำหรับจำค่า Consumption\r\nvar consumptionState = safeParse(metadata.floors_consumption_state);\r\n\r\n// 1. รวม Power ของทุกชั้นในตึก\r\nif (msg.power_total_floor !== undefined && msg.power_total_floor !== null && msg.power_total_floor !== \"\") {\r\n    powerState[floor] = Number(msg.power_total_floor) || 0;\r\n    var totalPower = 0;\r\n    for (var f in powerState) { totalPower += Number(powerState[f]) || 0; }\r\n    newMsg.floors_power_state = JSON.stringify(powerState);\r\n    newMsg.power_total_building = totalPower;\r\n}\r\n\r\n// 2. รวม Energy สะสมของทุกชั้นในตึก\r\nif (msg.energy_kwh_floor !== undefined && msg.energy_kwh_floor !== null && msg.energy_kwh_floor !== \"\") {\r\n    energyState[floor] = Number(msg.energy_kwh_floor) || 0;\r\n    var totalEnergy = 0;\r\n    for (var f in energyState) { totalEnergy += Number(energyState[f]) || 0; }\r\n    newMsg.floors_energy_state = JSON.stringify(energyState);\r\n    newMsg.energy_kwh_building = totalEnergy;\r\n}\r\n\r\n// 3. จัดการ Consumption (แบบทดสอบจำค่า vs แบบโยนเข้ากระปุก)\r\nif (msg.Energy_consumption !== undefined && msg.Energy_consumption !== null) {\r\n\r\n    consumptionState[floor] = Number(msg.Energy_consumption) || 0;\r\n    var totalConsumption = 0;\r\n    for (var c in consumptionState) { totalConsumption += Number(consumptionState[c]) || 0; }\r\n    \r\n    // บันทึก State กลับไป และสร้างตัวแปรใหม่ที่บวกยอดแบบจำค่าแล้ว\r\n    newMsg.floors_consumption_state = JSON.stringify(consumptionState);\r\n    newMsg.Ec_total_building = totalConsumption;\r\n    // -------------------------------------------------------------------\r\n\r\n    // 🌟 [แบบที่ถูกต้อง] โยนค่าเข้ากระปุกตึกตรงๆ (เก็บไว้ดูเทียบกัน)\r\n    newMsg.Energy_consumption = Number(msg.Energy_consumption);\r\n    \r\n    if (msg.CO2 !== undefined && msg.CO2 !== null) {\r\n        newMsg.CO2 = Number(msg.CO2);\r\n    }\r\n    if (msg.E_charge !== undefined && msg.E_charge !== null) {\r\n        newMsg.E_charge = Number(msg.E_charge);\r\n    }\r\n}\r\n\r\nreturn {msg: newMsg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "// 1. ดึงข้อมูลสถานะล่าสุดของมิเตอร์ทุกตัวในชั้น (จากที่ดึงมาในขั้นที่ 2)\r\nvar state = {};\r\nif (metadata.meters_state_json) {\r\n    try { \r\n        state = JSON.parse(metadata.meters_state_json); \r\n    } catch(e) {}\r\n}\r\n\r\n// 2. อัปเดตข้อมูลเฉพาะมิเตอร์ตัวที่เพิ่งส่งข้อมูลเข้ามา (ระบบดึง Device Name ให้อัตโนมัติ)\r\nstate[metadata.deviceName] = {\r\n    power: parseFloat(msg.power_total) || 0,\r\n    energy: parseFloat(msg.energy_kWh) || 0\r\n};\r\n\r\n// 3. วนลูปคำนวณผลรวมพลังงานของมิเตอร์ \"ทุกตัว\" ในชั้นนี้\r\nvar totalPower = 0;\r\nvar totalEnergy = 0;\r\nfor (var meter in state) {\r\n    totalPower += state[meter].power;\r\n    totalEnergy += state[meter].energy;\r\n}\r\n\r\n// 5. สร้าง Message ใหม่เพื่อบันทึกผลลัพธ์\r\nvar newMsg = {\r\n    meters_state_json: JSON.stringify(state), // ซ่อนค่าแยกมิเตอร์ไว้ในตัวแปรนี้เพื่อใช้คำนวณรอบหน้า\r\n    power_total_floor: totalPower,\r\n    energy_kWh_floor: totalEnergy,\r\n};\r\n\r\nreturn {msg: newMsg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
@@ -444,8 +452,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 678,
-        "layoutY" : 646
+        "layoutX" : 350,
+        "layoutY" : 752
       },
       "configuration" : {
         "originatorSource" : "ENTITY",
@@ -481,8 +489,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 446,
-        "layoutY" : 616
+        "layoutX" : 70,
+        "layoutY" : 693
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -509,8 +517,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 703,
-        "layoutY" : 540
+        "layoutX" : 352,
+        "layoutY" : 678
       },
       "configuration" : {
         "originatorSource" : "ENTITY",
@@ -543,6 +551,60 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 663,
+        "layoutY" : 338
+      },
+      "configuration" : {
+        "useMetadataPeriodInSecondsPatterns" : false,
+        "periodInSeconds" : 60,
+        "periodInSecondsPattern" : null,
+        "maxPendingMsgs" : 2000
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d6bd47d0-18a7-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "delay",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.delay.TbMsgDelayNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 658,
+        "layoutY" : 652
+      },
+      "configuration" : {
+        "useMetadataPeriodInSecondsPatterns" : false,
+        "periodInSeconds" : 60,
+        "periodInSecondsPattern" : null,
+        "maxPendingMsgs" : 2000
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d6bd47d1-18a7-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "delay",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.delay.TbMsgDelayNode"
     } ],
     "ruleChainConnections" : null
   },
@@ -558,7 +620,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 8033
+    "version" : 8757
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
