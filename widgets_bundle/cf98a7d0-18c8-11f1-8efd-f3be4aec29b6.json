@@ -1,0 +1,22 @@
+{
+  "entityType" : "WIDGETS_BUNDLE",
+  "entity" : {
+    "alias" : "add_device_assets",
+    "description" : "",
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGETS_BUNDLE",
+      "id" : "cf98a7d0-18c8-11f1-8efd-f3be4aec29b6"
+    },
+    "image" : "",
+    "name" : "add device & assets",
+    "order" : null,
+    "scada" : true,
+    "title" : "add device & assets"
+  },
+  "fqns" : [ "add_device_assets" ],
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

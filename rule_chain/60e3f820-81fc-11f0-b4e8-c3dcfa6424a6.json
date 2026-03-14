@@ -20,7 +20,7 @@
   "metaData" : {
     "connections" : [ {
       "fromIndex" : 0,
-      "toIndex" : 7,
+      "toIndex" : 11,
       "type" : "Success"
     }, {
       "fromIndex" : 2,
@@ -40,35 +40,35 @@
       "type" : "RPC Request to Device"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 9,
+      "toIndex" : 8,
       "type" : "Post telemetry"
     }, {
       "fromIndex" : 6,
       "toIndex" : 2,
       "type" : "Success"
     }, {
-      "fromIndex" : 8,
+      "fromIndex" : 7,
       "toIndex" : 0,
       "type" : "Failure"
     }, {
-      "fromIndex" : 8,
+      "fromIndex" : 7,
       "toIndex" : 0,
       "type" : "Other"
     }, {
-      "fromIndex" : 8,
+      "fromIndex" : 7,
       "toIndex" : 0,
       "type" : "Success"
     }, {
-      "fromIndex" : 9,
-      "toIndex" : 8,
+      "fromIndex" : 8,
+      "toIndex" : 7,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : null,
-        "layoutX" : 686,
-        "layoutY" : 51
+        "layoutX" : 633,
+        "layoutY" : 131
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -96,8 +96,8 @@
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
     }, {
       "additionalInfo" : {
-        "layoutX" : 446,
-        "layoutY" : 499
+        "layoutX" : 476,
+        "layoutY" : 522
       },
       "configuration" : {
         "processingSettings" : {
@@ -244,33 +244,6 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 800,
-        "layoutY" : 139
-      },
-      "configuration" : {
-        "forwardMsgToDefaultRuleChain" : false,
-        "ruleChainId" : "52d6b420-8dcd-11f0-b9c1-e701b95f2fd6"
-      },
-      "configurationVersion" : 1,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 1757467903012,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "05d34d10-8de0-11f0-b9c1-e701b95f2fd6"
-      },
-      "name" : "Aggregate Building Energy",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
         "layoutX" : 329,
         "layoutY" : 47
       },
@@ -304,8 +277,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 350,
-        "layoutY" : 146
+        "layoutX" : 315,
+        "layoutY" : 141
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -325,6 +298,79 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1223,
+        "layoutY" : 340
+      },
+      "configuration" : {
+        "forwardMsgToDefaultRuleChain" : false,
+        "ruleChainId" : "bd1700e0-157e-11f1-8efd-f3be4aec29b6"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "059b4dd0-157f-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "test meter",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 963,
+        "layoutY" : 439
+      },
+      "configuration" : {
+        "forwardMsgToDefaultRuleChain" : false,
+        "ruleChainId" : "52d6b420-8dcd-11f0-b9c1-e701b95f2fd6"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "0c8905e0-158b-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "Asset floors Energy",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 884,
+        "layoutY" : 140
+      },
+      "configuration" : {
+        "forwardMsgToDefaultRuleChain" : false,
+        "ruleChainId" : "667166b0-18d3-11f1-8efd-f3be4aec29b6"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f1246170-18d5-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "Data Mirroring",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     } ],
     "ruleChainConnections" : null
   },
@@ -336,11 +382,37 @@
     },
     "to" : {
       "entityType" : "RULE_CHAIN",
+      "id" : "bd1700e0-157e-11f1-8efd-f3be4aec29b6"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 13475
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "60e3f820-81fc-11f0-b4e8-c3dcfa6424a6"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
       "id" : "52d6b420-8dcd-11f0-b9c1-e701b95f2fd6"
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 7623
+    "version" : 13720
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "60e3f820-81fc-11f0-b4e8-c3dcfa6424a6"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "667166b0-18d3-11f1-8efd-f3be4aec29b6"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 13471
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

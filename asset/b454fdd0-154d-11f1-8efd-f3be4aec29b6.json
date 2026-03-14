@@ -15,13 +15,26 @@
     "externalId" : null,
     "id" : {
       "entityType" : "ASSET",
-      "id" : "7f9666b0-0db9-11f1-8efd-f3be4aec29b6"
+      "id" : "b454fdd0-154d-11f1-8efd-f3be4aec29b6"
     },
     "label" : null,
-    "name" : "E12_Floor_1",
+    "name" : "E12_Floor_2",
     "type" : "Floors"
   },
   "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b454fdd0-154d-11f1-8efd-f3be4aec29b6"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "87eca690-18d5-11f1-8efd-f3be4aec29b6"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 9859
+  }, {
     "additionalInfo" : null,
     "from" : {
       "entityType" : "ASSET",
@@ -29,24 +42,11 @@
     },
     "to" : {
       "entityType" : "ASSET",
-      "id" : "7f9666b0-0db9-11f1-8efd-f3be4aec29b6"
+      "id" : "b454fdd0-154d-11f1-8efd-f3be4aec29b6"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 3833
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "ASSET",
-      "id" : "7f9666b0-0db9-11f1-8efd-f3be4aec29b6"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "a118f660-0b46-11f1-8efd-f3be4aec29b6"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 9852
+    "version" : 9858
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

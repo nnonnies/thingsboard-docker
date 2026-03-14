@@ -6,7 +6,10 @@
     },
     "configuration" : null,
     "debugMode" : false,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "52d6b420-8dcd-11f0-b9c1-e701b95f2fd6"
+    },
     "firstRuleNodeId" : {
       "entityType" : "RULE_NODE",
       "id" : "81d42d50-11cd-11f1-8efd-f3be4aec29b6"
@@ -319,7 +322,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 12978
+    "version" : 13719
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -332,7 +335,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 10641
+    "version" : 13720
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -345,7 +348,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 11947
+    "version" : 13841
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

@@ -1,9 +1,7 @@
 {
   "entityType" : "ASSET",
   "entity" : {
-    "additionalInfo" : {
-      "description" : ""
-    },
+    "additionalInfo" : null,
     "assetProfileId" : {
       "entityType" : "ASSET_PROFILE",
       "id" : "99875e10-8670-11f0-9729-d17c6bb9591b"
@@ -15,38 +13,38 @@
     "externalId" : null,
     "id" : {
       "entityType" : "ASSET",
-      "id" : "7f9666b0-0db9-11f1-8efd-f3be4aec29b6"
+      "id" : "40e29d90-18d5-11f1-8efd-f3be4aec29b6"
     },
     "label" : null,
-    "name" : "E12_Floor_1",
+    "name" : "Floor_1",
     "type" : "Floors"
   },
   "relations" : [ {
     "additionalInfo" : null,
     "from" : {
       "entityType" : "ASSET",
-      "id" : "21d69c90-82c0-11f0-8320-a5effcba47d0"
+      "id" : "faa3b4c0-838f-11f0-8deb-6deff6c18a3b"
     },
     "to" : {
       "entityType" : "ASSET",
-      "id" : "7f9666b0-0db9-11f1-8efd-f3be4aec29b6"
+      "id" : "40e29d90-18d5-11f1-8efd-f3be4aec29b6"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 3833
+    "version" : 9853
   }, {
     "additionalInfo" : null,
     "from" : {
       "entityType" : "ASSET",
-      "id" : "7f9666b0-0db9-11f1-8efd-f3be4aec29b6"
+      "id" : "40e29d90-18d5-11f1-8efd-f3be4aec29b6"
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "a118f660-0b46-11f1-8efd-f3be4aec29b6"
+      "id" : "413f8aa0-18d5-11f1-8efd-f3be4aec29b6"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 9852
+    "version" : 9854
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

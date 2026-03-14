@@ -1,11 +1,7 @@
 {
   "entityType" : "DEVICE",
   "entity" : {
-    "additionalInfo" : {
-      "gateway" : true,
-      "overwriteActivityTime" : false,
-      "description" : ""
-    },
+    "additionalInfo" : null,
     "customerId" : {
       "entityType" : "CUSTOMER",
       "id" : "13814000-1dd2-11b2-8080-808080808080"
@@ -20,37 +16,37 @@
     },
     "deviceProfileId" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "72092ee0-0b36-11f1-8efd-f3be4aec29b6"
+      "id" : "260faaf0-8387-11f0-8deb-6deff6c18a3b"
     },
     "externalId" : null,
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "69675c00-0b1b-11f1-8efd-f3be4aec29b6"
+      "id" : "87eca690-18d5-11f1-8efd-f3be4aec29b6"
     },
-    "label" : "Dragino_Gateway",
-    "name" : "LoRaWAN-Gateway",
+    "label" : null,
+    "name" : "Mock_Meter_1",
     "softwareId" : null,
-    "type" : "Dragino-Box"
+    "type" : "EnergyMeter"
   },
   "credentials" : {
-    "credentialsId" : "EWf5f4QkMt6X5dFYo9m3",
+    "credentialsId" : "BAwqRLe1CA5RVWGoIAeS",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
   "relations" : [ {
     "additionalInfo" : null,
     "from" : {
-      "entityType" : "DEVICE",
-      "id" : "69675c00-0b1b-11f1-8efd-f3be4aec29b6"
+      "entityType" : "ASSET",
+      "id" : "b454fdd0-154d-11f1-8efd-f3be4aec29b6"
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "a118f660-0b46-11f1-8efd-f3be4aec29b6"
+      "id" : "87eca690-18d5-11f1-8efd-f3be4aec29b6"
     },
-    "type" : "Created",
+    "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 3831
+    "version" : 9859
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
@@ -58,7 +54,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1771243823135,
+      "lastUpdateTs" : 1773525168324,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -66,32 +62,32 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1771235382640,
-      "longValue" : 1771235382640,
+      "lastUpdateTs" : 1773525167818,
+      "longValue" : 1773525167818,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1773529126180,
-      "longValue" : 1773529124280,
+      "lastUpdateTs" : 1773524548174,
+      "longValue" : 1773524547008,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1771437373244,
-      "longValue" : 1771437373244,
+      "lastUpdateTs" : 1773524546490,
+      "longValue" : 1773524546490,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1771437372661,
-      "longValue" : 1771437372661,
+      "lastUpdateTs" : 1773524547018,
+      "longValue" : 1773524547018,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]

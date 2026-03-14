@@ -21,9 +21,67 @@
     "name" : "ตึกพระจอมเกล้าฯ",
     "type" : "Buildings"
   },
-  "relations" : [ ],
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "faa3b4c0-838f-11f0-8deb-6deff6c18a3b"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "40e29d90-18d5-11f1-8efd-f3be4aec29b6"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 9853
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "faa3b4c0-838f-11f0-8deb-6deff6c18a3b"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "65ba39c0-18d5-11f1-8efd-f3be4aec29b6"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 9855
+  } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "floors_co2_state",
+      "lastUpdateTs" : 1773529067058,
+      "longValue" : null,
+      "strValue" : "{\"Floor_1\":0,\"Floor_2\":0}"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "floors_consumption_state",
+      "lastUpdateTs" : 1773529067058,
+      "longValue" : null,
+      "strValue" : "{\"Floor_2\":0,\"Floor_1\":0}"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "floors_echarge_state",
+      "lastUpdateTs" : 1773529067058,
+      "longValue" : null,
+      "strValue" : "{\"Floor_1\":0,\"Floor_2\":0}"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "floors_power_state",
+      "lastUpdateTs" : 1773529131509,
+      "longValue" : null,
+      "strValue" : "{\"Floor_2\":0.09072322398424149,\"Floor_1\":0.09072322398424149}"
+    }, {
       "booleanValue" : null,
       "doubleValue" : 13.729034960397131,
       "jsonValue" : null,
@@ -41,42 +99,5 @@
       "strValue" : null
     } ]
   },
-  "calculatedFields" : [ {
-    "configuration" : {
-      "type" : "SIMPLE",
-      "arguments" : {
-        "CO2" : {
-          "defaultValue" : "",
-          "refEntityId" : {
-            "entityType" : "ASSET",
-            "id" : "21d69c90-82c0-11f0-8320-a5effcba47d0"
-          },
-          "refEntityKey" : {
-            "key" : "total_energy_kwh",
-            "scope" : "SERVER_SCOPE",
-            "type" : "ATTRIBUTE"
-          }
-        }
-      },
-      "expression" : "CO*0.5986",
-      "output" : {
-        "decimalsByDefault" : 2,
-        "name" : "CO2",
-        "type" : "TIME_SERIES"
-      },
-      "useLatestTs" : false
-    },
-    "configurationVersion" : 0,
-    "debugSettings" : {
-      "allEnabled" : false,
-      "allEnabledUntil" : 1762252027181,
-      "failuresEnabled" : true
-    },
-    "name" : "Co2",
-    "tenantId" : {
-      "entityType" : "TENANT",
-      "id" : "608165c0-81fc-11f0-b4e8-c3dcfa6424a6"
-    },
-    "type" : "SIMPLE"
-  } ]
+  "calculatedFields" : [ ]
 }

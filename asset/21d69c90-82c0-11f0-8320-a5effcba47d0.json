@@ -29,6 +29,19 @@
     },
     "to" : {
       "entityType" : "ASSET",
+      "id" : "b454fdd0-154d-11f1-8efd-f3be4aec29b6"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 9858
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "21d69c90-82c0-11f0-8320-a5effcba47d0"
+    },
+    "to" : {
+      "entityType" : "ASSET",
       "id" : "7f9666b0-0db9-11f1-8efd-f3be4aec29b6"
     },
     "type" : "Contains",
@@ -46,6 +59,38 @@
       "strValue" : "/api/images/public/YZdO3sIynAXc5rcFmeZ3WkTTq4gX6AKV"
     }, {
       "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "floors_co2_state",
+      "lastUpdateTs" : 1773529066101,
+      "longValue" : null,
+      "strValue" : "{\"E12_Floor_1\":0,\"E12_Floor_2\":0}"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "floors_consumption_state",
+      "lastUpdateTs" : 1773529066101,
+      "longValue" : null,
+      "strValue" : "{\"E12_Floor_1\":0,\"E12_Floor_2\":0}"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "floors_echarge_state",
+      "lastUpdateTs" : 1773529066101,
+      "longValue" : null,
+      "strValue" : "{\"E12_Floor_1\":0,\"E12_Floor_2\":0}"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "floors_power_state",
+      "lastUpdateTs" : 1773529130556,
+      "longValue" : null,
+      "strValue" : "{\"E12_Floor_1\":0.09072322398424149,\"E12_Floor_2\":0.09072322398424149}"
+    }, {
+      "booleanValue" : null,
       "doubleValue" : 13.727633469037013,
       "jsonValue" : null,
       "key" : "latitude",
@@ -60,84 +105,7 @@
       "lastUpdateTs" : 1756335695507,
       "longValue" : null,
       "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "temp_count",
-      "lastUpdateTs" : 1771965396419,
-      "longValue" : 2,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "totalFloors",
-      "lastUpdateTs" : 1757875522836,
-      "longValue" : 4,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "total_current_a",
-      "lastUpdateTs" : 1771965395401,
-      "longValue" : 0,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : 59616.18754544,
-      "jsonValue" : null,
-      "key" : "total_energy_kwh",
-      "lastUpdateTs" : 1772006004827,
-      "longValue" : null,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "total_power_w",
-      "lastUpdateTs" : 1771965396203,
-      "longValue" : 0,
-      "strValue" : null
     } ]
   },
-  "calculatedFields" : [ {
-    "configuration" : {
-      "type" : "SIMPLE",
-      "arguments" : {
-        "CO2" : {
-          "defaultValue" : "",
-          "refEntityId" : {
-            "entityType" : "ASSET",
-            "id" : "21d69c90-82c0-11f0-8320-a5effcba47d0"
-          },
-          "refEntityKey" : {
-            "key" : "total_energy_kwh",
-            "scope" : "SERVER_SCOPE",
-            "type" : "ATTRIBUTE"
-          }
-        }
-      },
-      "expression" : "CO2*0.5986",
-      "output" : {
-        "decimalsByDefault" : 2,
-        "name" : "CO2",
-        "type" : "TIME_SERIES"
-      },
-      "useLatestTs" : false
-    },
-    "configurationVersion" : 0,
-    "debugSettings" : {
-      "allEnabled" : false,
-      "allEnabledUntil" : 1762252142478,
-      "failuresEnabled" : true
-    },
-    "name" : "CO2",
-    "tenantId" : {
-      "entityType" : "TENANT",
-      "id" : "608165c0-81fc-11f0-b4e8-c3dcfa6424a6"
-    },
-    "type" : "SIMPLE"
-  } ]
+  "calculatedFields" : [ ]
 }

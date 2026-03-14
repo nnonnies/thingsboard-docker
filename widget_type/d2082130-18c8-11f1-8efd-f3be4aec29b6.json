@@ -1,0 +1,34 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "add_device_assets",
+    "name" : "add device & assets",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 6,
+      "resources" : [ ],
+      "templateHtml" : "<form class=\"add-entity-form\" style=\"padding: 20px;\">\r\n    <h3>Add Device & Assets</h3>\r\n    \r\n    <label>Building Name (Asset):</label>\r\n    <input type=\"text\" id=\"inputBuilding\" required style=\"width: 100%; margin-bottom: 10px;\">\r\n    \r\n    <label>Floor Name (Asset):</label>\r\n    <input type=\"text\" id=\"inputFloor\" required style=\"width: 100%; margin-bottom: 10px;\">\r\n    \r\n    <label>Device Name (e.g., ESP32 Node):</label>\r\n    <input type=\"text\" id=\"inputDevice\" required style=\"width: 100%; margin-bottom: 20px;\">\r\n    \r\n    <button type=\"button\" id=\"btnSubmit\" style=\"padding: 10px 20px; background: #305680; color: white; border: none; cursor: pointer;\">\r\n        Create & Link\r\n    </button>\r\n</form>",
+      "templateCss" : "",
+      "controllerScript" : "self.onInit = function() {\r\n    // $container คือพื้นที่ของ Widget นี้ (เรียกใช้ jQuery ได้เลย)\r\n    let $container = self.ctx.$container;\r\n\r\n    // --- ฟังก์ชันช่วยเหลือสำหรับยิง API แบบรอผล (Promise) ---\r\n    function httpGet(url) {\r\n        return new Promise((resolve, reject) => {\r\n            self.ctx.http.get(url).subscribe(resolve, reject);\r\n        });\r\n    }\r\n    function httpPost(url, payload) {\r\n        return new Promise((resolve, reject) => {\r\n            self.ctx.http.post(url, payload).subscribe(resolve, reject);\r\n        });\r\n    }\r\n\r\n    // --- ฟังก์ชันค้นหาหรือสร้าง Asset ---\r\n    async function getOrCreateAsset(name, type) {\r\n        try {\r\n            let existing = await httpGet('/api/tenant/assets?assetName=' + encodeURIComponent(name));\r\n            if (existing && existing.id) return existing.id.id; // มีอยู่แล้ว คืนค่า ID เดิม\r\n        } catch (err) { \r\n            // ไม่พบชื่อนี้ ให้ข้ามไปสร้างใหม่\r\n        }\r\n        let newAsset = await httpPost('/api/asset', { name: name, type: type });\r\n        return newAsset.id.id; // คืนค่า ID ใหม่\r\n    }\r\n\r\n    // --- ฟังก์ชันค้นหาหรือสร้าง Device ---\r\n    async function getOrCreateDevice(name, type) {\r\n        try {\r\n            let existing = await httpGet('/api/tenant/devices?deviceName=' + encodeURIComponent(name));\r\n            if (existing && existing.id) return existing.id.id;\r\n        } catch (err) {}\r\n        \r\n        let newDevice = await httpPost('/api/device', { name: name, type: type });\r\n        return newDevice.id.id;\r\n    }\r\n\r\n    // --- จับ Event เมื่อ User กดปุ่ม \"Create & Link\" ---\r\n    $container.find('#btnSubmit').click(async function() {\r\n        // ดึงค่าจากหน้าฟอร์ม\r\n        let bName = $container.find('#inputBuilding').val();\r\n        let fName = $container.find('#inputFloor').val();\r\n        let dName = $container.find('#inputDevice').val();\r\n\r\n        // เช็คว่ากรอกครบไหม\r\n        if (!bName || !fName || !dName) {\r\n            alert(\"Please fill in all fields.\");\r\n            return;\r\n        }\r\n\r\n        // เปลี่ยนสถานะปุ่มกันคนกดรัวๆ\r\n        let $btn = $(this);\r\n        $btn.text('Creating...').prop('disabled', true);\r\n\r\n        try {\r\n            // 1. สร้าง/หา ตึก และ ชั้น\r\n            let buildingId = await getOrCreateAsset(bName, 'Buildings');\r\n            let floorId = await getOrCreateAsset(fName, 'Floors');\r\n            \r\n            // 2. สร้าง/หา Device\r\n            let deviceId = await getOrCreateDevice(dName, 'EnergyMeter');\r\n\r\n            // 3. ผูก Relation (Building -> Floor)\r\n            await httpPost('/api/relation', {\r\n                type: 'Contains',\r\n                from: { id: buildingId, entityType: 'ASSET' },\r\n                to: { id: floorId, entityType: 'ASSET' }\r\n            });\r\n\r\n            // 4. ผูก Relation (Floor -> Device)\r\n            await httpPost('/api/relation', {\r\n                type: 'Contains',\r\n                from: { id: floorId, entityType: 'ASSET' },\r\n                to: { id: deviceId, entityType: 'DEVICE' }\r\n            });\r\n\r\n            alert('Successfully created and linked Building -> Floor -> Device!');\r\n            \r\n            // เคลียร์ค่าในช่องกรอก\r\n            $container.find('#inputBuilding').val('');\r\n            $container.find('#inputFloor').val('');\r\n            $container.find('#inputDevice').val('');\r\n\r\n        } catch (error) {\r\n            console.error(\"Error in process:\", error);\r\n            alert(\"An error occurred! Please press F12 and check the Console tab.\");\r\n        } finally {\r\n            // คืนค่าปุ่มกลับมาเป็นปกติ\r\n            $btn.text('Create & Link').prop('disabled', false);\r\n        }\r\n    });\r\n};",
+      "settingsForm" : [ ],
+      "settingsDirective" : "tb-html-card-widget-settings",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"add device & assets\",\"dropShadow\":true}"
+    },
+    "externalId" : null,
+    "resources" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "d2082130-18c8-11f1-8efd-f3be4aec29b6"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

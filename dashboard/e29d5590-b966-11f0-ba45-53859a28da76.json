@@ -581,7 +581,7 @@
               "dataKeys" : [ {
                 "name" : "Co2_Emission",
                 "type" : "timeseries",
-                "label" : "Current A",
+                "label" : "Co2_Emission",
                 "color" : "#2196f3",
                 "settings" : {
                   "yAxisId" : "default",
@@ -654,7 +654,11 @@
                 },
                 "_hash" : 0.3143550029632681,
                 "units" : "kg",
-                "decimals" : 2
+                "decimals" : 8,
+                "aggregationType" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -1096,6 +1100,14 @@
               "entityAliasId" : "df1b2255-2c2f-9544-993c-a552b16c5a1e",
               "filterId" : null,
               "dataKeys" : [ {
+                "name" : "name",
+                "type" : "entityField",
+                "label" : "Name",
+                "color" : "#607d8b",
+                "settings" : { },
+                "_hash" : 0.2721972368964537,
+                "decimals" : 0
+              }, {
                 "name" : "power_total",
                 "type" : "timeseries",
                 "label" : "power_total",
@@ -1151,7 +1163,7 @@
               }
             } ],
             "displayTimewindow" : true,
-            "configMode" : "advanced",
+            "configMode" : "basic",
             "actions" : { },
             "showTitleIcon" : false,
             "titleIcon" : "list",
@@ -2417,13 +2429,13 @@
                 "701fc198-9048-3a95-546c-f6c0f80be7c8" : {
                   "sizeX" : 12,
                   "sizeY" : 5,
-                  "row" : 10,
+                  "row" : 11,
                   "col" : 0
                 },
                 "4295ad25-f14e-6f7e-46d6-e11724c4297d" : {
                   "sizeX" : 12,
                   "sizeY" : 5,
-                  "row" : 15,
+                  "row" : 16,
                   "col" : 0
                 },
                 "d40181fc-0fa1-a3e6-dc1e-0cfef8f508fd" : {
@@ -2434,13 +2446,13 @@
                 },
                 "9cf7f2fd-5d01-696c-9f6a-34f0d836bd36" : {
                   "sizeX" : 12,
-                  "sizeY" : 8,
+                  "sizeY" : 9,
                   "row" : 2,
                   "col" : 0
                 },
                 "8311c3e6-e050-bdd4-1b59-b0f6ecc398bc" : {
                   "sizeX" : 12,
-                  "sizeY" : 8,
+                  "sizeY" : 11,
                   "row" : 2,
                   "col" : 12
                 },
@@ -2452,13 +2464,13 @@
                 },
                 "8b0bb021-f05d-891d-dabc-abe2b81e5ca1" : {
                   "sizeX" : 12,
-                  "sizeY" : 5,
-                  "row" : 10,
+                  "sizeY" : 7,
+                  "row" : 13,
                   "col" : 12
                 },
                 "829530df-b448-c876-1907-7be01d10dbfe" : {
                   "sizeX" : 13,
-                  "sizeY" : 5,
+                  "sizeY" : 7,
                   "row" : 10,
                   "col" : 24
                 },
@@ -2499,7 +2511,7 @@
             "type" : "entityList",
             "resolveMultiple" : true,
             "entityType" : "ASSET",
-            "entityList" : [ "7f9666b0-0db9-11f1-8efd-f3be4aec29b6", "b454fdd0-154d-11f1-8efd-f3be4aec29b6" ]
+            "entityList" : [ "7f9666b0-0db9-11f1-8efd-f3be4aec29b6", "b454fdd0-154d-11f1-8efd-f3be4aec29b6", "40e29d90-18d5-11f1-8efd-f3be4aec29b6", "65ba39c0-18d5-11f1-8efd-f3be4aec29b6" ]
           }
         },
         "0b54aaa5-70f6-8868-8249-2846b6e21ea1" : {
@@ -2510,6 +2522,16 @@
             "resolveMultiple" : true,
             "entityType" : "ASSET",
             "entityList" : [ "faa3b4c0-838f-11f0-8deb-6deff6c18a3b", "21d69c90-82c0-11f0-8320-a5effcba47d0" ]
+          }
+        },
+        "ab0c3eb3-7706-81c6-805e-52665c2fba0a" : {
+          "id" : "ab0c3eb3-7706-81c6-805e-52665c2fba0a",
+          "alias" : "all floors ตึกพระจอมเกล้า",
+          "filter" : {
+            "type" : "entityList",
+            "resolveMultiple" : true,
+            "entityType" : "ASSET",
+            "entityList" : [ "40e29d90-18d5-11f1-8efd-f3be4aec29b6", "65ba39c0-18d5-11f1-8efd-f3be4aec29b6" ]
           }
         }
       },

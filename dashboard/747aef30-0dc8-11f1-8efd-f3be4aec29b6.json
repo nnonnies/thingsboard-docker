@@ -18,7 +18,7 @@
               "type" : "entity",
               "name" : "",
               "deviceId" : null,
-              "entityAliasId" : "68445e04-3738-68e8-5a6f-2476299566f2",
+              "entityAliasId" : "1e2244be-340b-b8c1-7830-df92c794f6ec",
               "dataKeys" : [ {
                 "name" : "Energy_consumption",
                 "type" : "timeseries",
@@ -459,7 +459,7 @@
               "type" : "entity",
               "name" : "",
               "deviceId" : "a118f660-0b46-11f1-8efd-f3be4aec29b6",
-              "entityAliasId" : "68445e04-3738-68e8-5a6f-2476299566f2",
+              "entityAliasId" : "1e2244be-340b-b8c1-7830-df92c794f6ec",
               "filterId" : null,
               "dataKeys" : [ {
                 "name" : "voltage_a",
@@ -1026,7 +1026,7 @@
             "datasources" : [ {
               "type" : "entity",
               "name" : null,
-              "entityAliasId" : "68445e04-3738-68e8-5a6f-2476299566f2",
+              "entityAliasId" : "81d20c6f-30d2-faf3-d0fb-6ec0ff9adcbb",
               "filterId" : null,
               "dataKeys" : [ ],
               "alarmFilterConfig" : {
@@ -1065,12 +1065,8 @@
                 "icon" : "more_horiz",
                 "useShowWidgetActionFunction" : null,
                 "showWidgetActionFunction" : "return true;",
-                "type" : "openDashboard",
-                "targetDashboardStateId" : "Floors",
-                "setEntityId" : true,
-                "stateEntityParamName" : null,
-                "openNewBrowserTab" : false,
-                "targetDashboardId" : "747aef30-0dc8-11f1-8efd-f3be4aec29b6",
+                "type" : "custom",
+                "customFunction" : "widgetContext.stateController.navigatePrevState(1);",
                 "openInSeparateDialog" : false,
                 "openInPopover" : false,
                 "id" : "fd666ec9-cd5a-af01-47e1-b7e53911f87a"
@@ -1233,7 +1229,7 @@
               "type" : "entity",
               "name" : "",
               "deviceId" : null,
-              "entityAliasId" : "68445e04-3738-68e8-5a6f-2476299566f2",
+              "entityAliasId" : "1e2244be-340b-b8c1-7830-df92c794f6ec",
               "dataKeys" : [ {
                 "name" : "power_a",
                 "type" : "timeseries",
@@ -1842,9 +1838,12 @@
             "datasources" : [ {
               "type" : "entity",
               "name" : null,
-              "entityAliasId" : "81d20c6f-30d2-faf3-d0fb-6ec0ff9adcbb",
+              "entityAliasId" : "bdfdc084-d465-d671-767b-7157d8adf164",
               "filterId" : null,
-              "dataKeys" : [ ]
+              "dataKeys" : [ ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
             } ],
             "showTitle" : false,
             "backgroundColor" : "#fff",
@@ -1878,12 +1877,8 @@
                 "icon" : "more_horiz",
                 "useShowWidgetActionFunction" : null,
                 "showWidgetActionFunction" : "return true;",
-                "type" : "openDashboard",
-                "targetDashboardStateId" : "buildings",
-                "setEntityId" : true,
-                "stateEntityParamName" : null,
-                "openNewBrowserTab" : false,
-                "targetDashboardId" : "747aef30-0dc8-11f1-8efd-f3be4aec29b6",
+                "type" : "custom",
+                "customFunction" : "widgetContext.stateController.navigatePrevState(0);",
                 "openInSeparateDialog" : false,
                 "openInPopover" : false,
                 "id" : "fd666ec9-cd5a-af01-47e1-b7e53911f87a"
@@ -1932,7 +1927,9 @@
                 "type" : "AVG",
                 "limit" : 25000
               }
-            }
+            },
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true
           },
           "row" : 0,
           "col" : 0,
@@ -1949,7 +1946,7 @@
               "type" : "entity",
               "name" : "",
               "deviceId" : null,
-              "entityAliasId" : "68445e04-3738-68e8-5a6f-2476299566f2",
+              "entityAliasId" : "1e2244be-340b-b8c1-7830-df92c794f6ec",
               "filterId" : null,
               "dataKeys" : [ {
                 "name" : "current_a",
@@ -2523,7 +2520,7 @@
               "dataKeys" : [ {
                 "name" : "Co2_Emission",
                 "type" : "timeseries",
-                "label" : "Current A",
+                "label" : "{entityName}",
                 "color" : "#2196f3",
                 "settings" : {
                   "yAxisId" : "default",
@@ -2596,7 +2593,11 @@
                 },
                 "_hash" : 0.3143550029632681,
                 "units" : "kg",
-                "decimals" : 2
+                "decimals" : 8,
+                "aggregationType" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -2933,7 +2934,7 @@
               "type" : "entity",
               "name" : "",
               "deviceId" : "a118f660-0b46-11f1-8efd-f3be4aec29b6",
-              "entityAliasId" : "68445e04-3738-68e8-5a6f-2476299566f2",
+              "entityAliasId" : "1e2244be-340b-b8c1-7830-df92c794f6ec",
               "dataKeys" : [ {
                 "name" : "Frequency",
                 "type" : "timeseries",
@@ -3089,7 +3090,7 @@
               "type" : "entity",
               "name" : "",
               "deviceId" : "a118f660-0b46-11f1-8efd-f3be4aec29b6",
-              "entityAliasId" : "68445e04-3738-68e8-5a6f-2476299566f2",
+              "entityAliasId" : "1e2244be-340b-b8c1-7830-df92c794f6ec",
               "dataKeys" : [ {
                 "name" : "power_total",
                 "type" : "timeseries",
@@ -3180,7 +3181,10 @@
                 "aggregationType" : "AVG",
                 "comparisonEnabled" : true,
                 "timeForComparison" : "previousInterval",
-                "comparisonResultType" : "DELTA_PERCENT"
+                "comparisonResultType" : "DELTA_PERCENT",
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               }, {
                 "name" : "power_total",
                 "type" : "timeseries",
@@ -3213,7 +3217,10 @@
                 "aggregationType" : "AVG",
                 "comparisonEnabled" : true,
                 "timeForComparison" : "previousInterval",
-                "comparisonResultType" : "DELTA_ABSOLUTE"
+                "comparisonResultType" : "DELTA_ABSOLUTE",
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               } ]
             } ],
             "timewindow" : {
@@ -3406,7 +3413,7 @@
               "type" : "entity",
               "name" : "",
               "deviceId" : "a118f660-0b46-11f1-8efd-f3be4aec29b6",
-              "entityAliasId" : "68445e04-3738-68e8-5a6f-2476299566f2",
+              "entityAliasId" : "1e2244be-340b-b8c1-7830-df92c794f6ec",
               "dataKeys" : [ {
                 "name" : "PowerFactor_total",
                 "type" : "timeseries",
@@ -3561,7 +3568,7 @@
               "type" : "entity",
               "name" : "",
               "deviceId" : "a118f660-0b46-11f1-8efd-f3be4aec29b6",
-              "entityAliasId" : "68445e04-3738-68e8-5a6f-2476299566f2",
+              "entityAliasId" : "1e2244be-340b-b8c1-7830-df92c794f6ec",
               "dataKeys" : [ {
                 "name" : "PowerFactor_a",
                 "type" : "timeseries",
@@ -3722,7 +3729,7 @@
               "type" : "entity",
               "name" : "",
               "deviceId" : "a118f660-0b46-11f1-8efd-f3be4aec29b6",
-              "entityAliasId" : "68445e04-3738-68e8-5a6f-2476299566f2",
+              "entityAliasId" : "1e2244be-340b-b8c1-7830-df92c794f6ec",
               "dataKeys" : [ {
                 "name" : "PowerFactor_a",
                 "type" : "timeseries",
@@ -3880,7 +3887,7 @@
               "type" : "entity",
               "name" : "",
               "deviceId" : "a118f660-0b46-11f1-8efd-f3be4aec29b6",
-              "entityAliasId" : "68445e04-3738-68e8-5a6f-2476299566f2",
+              "entityAliasId" : "1e2244be-340b-b8c1-7830-df92c794f6ec",
               "dataKeys" : [ {
                 "name" : "PowerFactor_a",
                 "type" : "timeseries",
@@ -4032,7 +4039,7 @@
               "type" : "entity",
               "name" : "",
               "deviceId" : null,
-              "entityAliasId" : "68445e04-3738-68e8-5a6f-2476299566f2",
+              "entityAliasId" : "1e2244be-340b-b8c1-7830-df92c794f6ec",
               "dataKeys" : [ {
                 "name" : "E_charge",
                 "type" : "timeseries",
@@ -4244,7 +4251,7 @@
             "datasources" : [ {
               "type" : "entity",
               "name" : "",
-              "entityAliasId" : "217463ee-7f36-05f4-61d0-858218b0b34e",
+              "entityAliasId" : "941f8aeb-3cca-925d-5432-315decbf6a51",
               "dataKeys" : [ {
                 "name" : "power_total_floor",
                 "type" : "timeseries",
@@ -4651,7 +4658,7 @@
             "datasources" : [ {
               "type" : "entity",
               "name" : "",
-              "entityAliasId" : "217463ee-7f36-05f4-61d0-858218b0b34e",
+              "entityAliasId" : "941f8aeb-3cca-925d-5432-315decbf6a51",
               "dataKeys" : [ {
                 "name" : "Energy_consumption",
                 "type" : "timeseries",
@@ -5062,7 +5069,7 @@
             "datasources" : [ {
               "type" : "entity",
               "name" : "",
-              "entityAliasId" : "217463ee-7f36-05f4-61d0-858218b0b34e",
+              "entityAliasId" : "941f8aeb-3cca-925d-5432-315decbf6a51",
               "dataKeys" : [ {
                 "name" : "CO2",
                 "type" : "timeseries",
@@ -5542,7 +5549,7 @@
             "datasources" : [ {
               "type" : "entity",
               "name" : "",
-              "entityAliasId" : "217463ee-7f36-05f4-61d0-858218b0b34e",
+              "entityAliasId" : "941f8aeb-3cca-925d-5432-315decbf6a51",
               "filterId" : null,
               "dataKeys" : [ {
                 "name" : "name",
@@ -5620,12 +5627,11 @@
                 "icon" : "more_horiz",
                 "useShowWidgetActionFunction" : null,
                 "showWidgetActionFunction" : "return true;",
-                "type" : "openDashboard",
+                "type" : "openDashboardState",
                 "targetDashboardStateId" : "Floors-detail",
                 "setEntityId" : true,
                 "stateEntityParamName" : null,
-                "openNewBrowserTab" : false,
-                "targetDashboardId" : "747aef30-0dc8-11f1-8efd-f3be4aec29b6",
+                "openRightLayout" : false,
                 "openInSeparateDialog" : false,
                 "openInPopover" : false,
                 "id" : "8d3db691-648d-f403-03b2-9721ecc68212"
@@ -5696,7 +5702,7 @@
             "alarmSource" : {
               "type" : "entity",
               "name" : "",
-              "entityAliasId" : "217463ee-7f36-05f4-61d0-858218b0b34e",
+              "entityAliasId" : "941f8aeb-3cca-925d-5432-315decbf6a51",
               "dataKeys" : [ {
                 "name" : "createdTime",
                 "type" : "alarm",
@@ -5999,7 +6005,7 @@
             "datasources" : [ {
               "type" : "entity",
               "name" : "",
-              "entityAliasId" : "217463ee-7f36-05f4-61d0-858218b0b34e",
+              "entityAliasId" : "941f8aeb-3cca-925d-5432-315decbf6a51",
               "dataKeys" : [ {
                 "name" : "power_total_floor",
                 "type" : "timeseries",
@@ -6390,7 +6396,7 @@
             "datasources" : [ {
               "type" : "entity",
               "name" : "",
-              "entityAliasId" : "217463ee-7f36-05f4-61d0-858218b0b34e",
+              "entityAliasId" : "941f8aeb-3cca-925d-5432-315decbf6a51",
               "dataKeys" : [ {
                 "name" : "CO2",
                 "type" : "timeseries",
@@ -6588,7 +6594,7 @@
             "datasources" : [ {
               "type" : "entity",
               "name" : "",
-              "entityAliasId" : "217463ee-7f36-05f4-61d0-858218b0b34e",
+              "entityAliasId" : "941f8aeb-3cca-925d-5432-315decbf6a51",
               "dataKeys" : [ {
                 "name" : "E_charge",
                 "type" : "timeseries",
@@ -6781,7 +6787,7 @@
             "datasources" : [ {
               "type" : "entity",
               "name" : "",
-              "entityAliasId" : "217463ee-7f36-05f4-61d0-858218b0b34e",
+              "entityAliasId" : "941f8aeb-3cca-925d-5432-315decbf6a51",
               "dataKeys" : [ {
                 "name" : "E_charge",
                 "type" : "timeseries",
@@ -7022,7 +7028,7 @@
             "datasources" : [ {
               "type" : "entityCount",
               "name" : "",
-              "entityAliasId" : "217463ee-7f36-05f4-61d0-858218b0b34e",
+              "entityAliasId" : "941f8aeb-3cca-925d-5432-315decbf6a51",
               "dataKeys" : [ {
                 "name" : "count",
                 "type" : "count",
@@ -7191,7 +7197,7 @@
             "datasources" : [ {
               "type" : "entityCount",
               "name" : "",
-              "entityAliasId" : "217463ee-7f36-05f4-61d0-858218b0b34e",
+              "entityAliasId" : "941f8aeb-3cca-925d-5432-315decbf6a51",
               "dataKeys" : [ {
                 "name" : "count",
                 "type" : "count",
@@ -8380,19 +8386,18 @@
               }
             } ],
             "displayTimewindow" : false,
-            "configMode" : "basic",
+            "configMode" : "advanced",
             "actions" : {
               "rowClick" : [ {
                 "name" : "Detail",
                 "icon" : "more_horiz",
                 "useShowWidgetActionFunction" : null,
                 "showWidgetActionFunction" : "return true;",
-                "type" : "openDashboard",
+                "type" : "openDashboardState",
                 "targetDashboardStateId" : "Floors",
                 "setEntityId" : true,
                 "stateEntityParamName" : null,
-                "openNewBrowserTab" : false,
-                "targetDashboardId" : "747aef30-0dc8-11f1-8efd-f3be4aec29b6",
+                "openRightLayout" : false,
                 "openInSeparateDialog" : false,
                 "openInPopover" : false,
                 "id" : "ee72eeb5-1515-a739-1e44-2f9b76be0061"
@@ -9273,17 +9278,16 @@
           "id" : "941f8aeb-3cca-925d-5432-315decbf6a51",
           "alias" : "AL_FLOORS_OF_BUILDING",
           "filter" : {
-            "type" : "assetSearchQuery",
+            "type" : "relationsQuery",
             "resolveMultiple" : true,
             "rootStateEntity" : true,
             "stateEntityParamName" : null,
             "defaultStateEntity" : null,
             "rootEntity" : null,
             "direction" : "FROM",
-            "maxLevel" : null,
-            "fetchLastLevelOnly" : true,
-            "relationType" : "Contains",
-            "assetTypes" : [ "Floors" ]
+            "maxLevel" : 1,
+            "fetchLastLevelOnly" : false,
+            "filters" : [ ]
           }
         },
         "005a1dda-c9ce-64d9-d021-ff76cb44df44" : {
@@ -9318,7 +9322,7 @@
         },
         "1e2244be-340b-b8c1-7830-df92c794f6ec" : {
           "id" : "1e2244be-340b-b8c1-7830-df92c794f6ec",
-          "alias" : "ListAlldevice",
+          "alias" : "device",
           "filter" : {
             "type" : "deviceSearchQuery",
             "resolveMultiple" : true,
@@ -9327,7 +9331,7 @@
             "defaultStateEntity" : null,
             "rootEntity" : null,
             "direction" : "FROM",
-            "maxLevel" : 2,
+            "maxLevel" : 1,
             "fetchLastLevelOnly" : true,
             "relationType" : "Contains",
             "deviceTypes" : [ "EnergyMeter" ]
