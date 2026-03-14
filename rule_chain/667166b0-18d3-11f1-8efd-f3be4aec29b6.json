@@ -54,7 +54,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 5,
-      "toIndex" : 11,
+      "toIndex" : 16,
       "type" : "Success"
     }, {
       "fromIndex" : 7,
@@ -62,7 +62,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 8,
-      "toIndex" : 11,
+      "toIndex" : 17,
       "type" : "Success"
     }, {
       "fromIndex" : 10,
@@ -87,6 +87,14 @@
     }, {
       "fromIndex" : 15,
       "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 10,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 0,
@@ -330,8 +338,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 606,
-        "layoutY" : 639
+        "layoutX" : 605,
+        "layoutY" : 654
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -386,8 +394,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1122,
-        "layoutY" : 282
+        "layoutX" : 1159,
+        "layoutY" : 288
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -412,12 +420,12 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 863,
-        "layoutY" : 333
+        "layoutX" : 859,
+        "layoutY" : 361
       },
       "configuration" : {
         "useMetadataPeriodInSecondsPatterns" : false,
-        "periodInSeconds" : 2,
+        "periodInSeconds" : 4,
         "periodInSecondsPattern" : null,
         "maxPendingMsgs" : 1000
       },
@@ -429,7 +437,7 @@
         "entityType" : "RULE_NODE",
         "id" : "a1c8fa40-1b51-11f1-8efd-f3be4aec29b6"
       },
-      "name" : "2sec",
+      "name" : "4sec",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -465,8 +473,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1113,
-        "layoutY" : 415
+        "layoutX" : 1203,
+        "layoutY" : 428
       },
       "configuration" : {
         "forwardMsgToDefaultRuleChain" : false,
@@ -545,36 +553,67 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 852,
+        "layoutY" : 234
+      },
+      "configuration" : {
+        "useMetadataPeriodInSecondsPatterns" : false,
+        "periodInSeconds" : 3,
+        "periodInSecondsPattern" : null,
+        "maxPendingMsgs" : 1000
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d0eaf8f1-1b5b-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "delay",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.delay.TbMsgDelayNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 891,
+        "layoutY" : 506
+      },
+      "configuration" : {
+        "useMetadataPeriodInSecondsPatterns" : false,
+        "periodInSeconds" : 1,
+        "periodInSecondsPattern" : null,
+        "maxPendingMsgs" : 1000
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "0d61f450-1b6b-11f1-8efd-f3be4aec29b6"
+      },
+      "name" : "1sec",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.delay.TbMsgDelayNode"
     } ],
     "ruleChainConnections" : null
   },
-  "relations" : [ {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "RULE_CHAIN",
-      "id" : "60e3f820-81fc-11f0-b4e8-c3dcfa6424a6"
-    },
-    "to" : {
-      "entityType" : "RULE_CHAIN",
-      "id" : "667166b0-18d3-11f1-8efd-f3be4aec29b6"
-    },
-    "type" : "Uses",
-    "typeGroup" : "COMMON",
-    "version" : 10639
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "RULE_CHAIN",
-      "id" : "667166b0-18d3-11f1-8efd-f3be4aec29b6"
-    },
-    "to" : {
-      "entityType" : "RULE_CHAIN",
-      "id" : "52d6b420-8dcd-11f0-b9c1-e701b95f2fd6"
-    },
-    "type" : "Uses",
-    "typeGroup" : "COMMON",
-    "version" : 11173
-  } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
   }
