@@ -9352,26 +9352,6 @@
             "filters" : [ ]
           }
         },
-        "005a1dda-c9ce-64d9-d021-ff76cb44df44" : {
-          "id" : "005a1dda-c9ce-64d9-d021-ff76cb44df44",
-          "alias" : "State entity",
-          "filter" : {
-            "type" : "stateEntity",
-            "resolveMultiple" : true,
-            "stateEntityParamName" : null,
-            "defaultStateEntity" : null
-          }
-        },
-        "68445e04-3738-68e8-5a6f-2476299566f2" : {
-          "id" : "68445e04-3738-68e8-5a6f-2476299566f2",
-          "alias" : "Energy meters",
-          "filter" : {
-            "type" : "deviceType",
-            "resolveMultiple" : true,
-            "deviceTypes" : [ "EnergyMeter" ],
-            "deviceNameFilter" : ""
-          }
-        },
         "81d20c6f-30d2-faf3-d0fb-6ec0ff9adcbb" : {
           "id" : "81d20c6f-30d2-faf3-d0fb-6ec0ff9adcbb",
           "alias" : "Selected energy meter",
