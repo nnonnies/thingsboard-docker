@@ -10,7 +10,7 @@
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "962f14c0-991b-11f0-bc00-9bbeaf642c16"
+      "id" : "71ca6490-83a4-11f0-8deb-6deff6c18a3b"
     },
     "externalId" : null,
     "id" : {
@@ -18,7 +18,7 @@
       "id" : "21d69c90-82c0-11f0-8320-a5effcba47d0"
     },
     "label" : "",
-    "name" : "ตึกวิศวกรรมศาสตร์",
+    "name" : "E12 KMITL",
     "type" : "Buildings"
   },
   "relations" : [ {
@@ -54,41 +54,41 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "buildingImage",
-      "lastUpdateTs" : 1756337469444,
+      "lastUpdateTs" : 1774258978080,
       "longValue" : null,
-      "strValue" : "/api/images/public/YZdO3sIynAXc5rcFmeZ3WkTTq4gX6AKV"
+      "strValue" : "/api/images/public/kaBMG6ukV6y61FRe0S0CLYVZcmNj4vfp"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "floors_co2_state",
-      "lastUpdateTs" : 1773529066101,
+      "lastUpdateTs" : 1774427220323,
       "longValue" : null,
-      "strValue" : "{\"E12_Floor_1\":0,\"E12_Floor_2\":0}"
+      "strValue" : "{\"E12_Floor_1\":0.000021044561180000002,\"E12_Floor_3\":0.000021044561180000002}"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "floors_consumption_state",
-      "lastUpdateTs" : 1773529066101,
+      "lastUpdateTs" : 1774427220323,
       "longValue" : null,
-      "strValue" : "{\"E12_Floor_1\":0,\"E12_Floor_2\":0}"
+      "strValue" : "{\"E12_Floor_1\":0.0000351563,\"E12_Floor_3\":0.0000351563}"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "floors_echarge_state",
-      "lastUpdateTs" : 1773529066101,
+      "lastUpdateTs" : 1774427220323,
       "longValue" : null,
-      "strValue" : "{\"E12_Floor_1\":0,\"E12_Floor_2\":0}"
+      "strValue" : "{\"E12_Floor_1\":0.00015820335,\"E12_Floor_3\":0.00015820335}"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "floors_power_state",
-      "lastUpdateTs" : 1773529130556,
+      "lastUpdateTs" : 1774427220222,
       "longValue" : null,
-      "strValue" : "{\"E12_Floor_1\":0.09072322398424149,\"E12_Floor_2\":0.09072322398424149}"
+      "strValue" : "{\"E12_Floor_1\":4.085353374481201,\"E12_Floor_3\":4.085353374481201}"
     }, {
       "booleanValue" : null,
       "doubleValue" : 13.727633469037013,
@@ -105,6 +105,14 @@
       "lastUpdateTs" : 1756335695507,
       "longValue" : null,
       "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "real_Image",
+      "lastUpdateTs" : 1774337498182,
+      "longValue" : null,
+      "strValue" : "/api/images/public/YZdO3sIynAXc5rcFmeZ3WkTTq4gX6AKV"
     } ]
   },
   "calculatedFields" : [ ]

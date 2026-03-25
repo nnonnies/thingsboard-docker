@@ -1,14 +1,16 @@
 {
   "entityType" : "ASSET",
   "entity" : {
-    "additionalInfo" : null,
+    "additionalInfo" : {
+      "description" : ""
+    },
     "assetProfileId" : {
       "entityType" : "ASSET_PROFILE",
       "id" : "99875e10-8670-11f0-9729-d17c6bb9591b"
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "71ca6490-83a4-11f0-8deb-6deff6c18a3b"
     },
     "externalId" : null,
     "id" : {
@@ -16,7 +18,7 @@
       "id" : "65ba39c0-18d5-11f1-8efd-f3be4aec29b6"
     },
     "label" : null,
-    "name" : "Floor_2",
+    "name" : "HM_Floor_7",
     "type" : "Floors"
   },
   "relations" : [ {
@@ -47,7 +49,31 @@
     "version" : 9856
   } ],
   "attributes" : {
-    "SERVER_SCOPE" : [ ]
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Image",
+      "lastUpdateTs" : 1774338957241,
+      "longValue" : null,
+      "strValue" : "/api/images/public/hY6XTi9Wh1Xk8DOtefL01DrC5E3btCy3"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.7,
+      "jsonValue" : null,
+      "key" : "xPos",
+      "lastUpdateTs" : 1774339132586,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.3,
+      "jsonValue" : null,
+      "key" : "yPos",
+      "lastUpdateTs" : 1774339148701,
+      "longValue" : null,
+      "strValue" : null
+    } ]
   },
   "calculatedFields" : [ ]
 }

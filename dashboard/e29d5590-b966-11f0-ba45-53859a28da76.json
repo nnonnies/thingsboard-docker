@@ -2589,13 +2589,6 @@
       },
       "title" : "Customer A",
       "public" : false
-    }, {
-      "customerId" : {
-        "entityType" : "CUSTOMER",
-        "id" : "71ca6490-83a4-11f0-8deb-6deff6c18a3b"
-      },
-      "title" : "Public",
-      "public" : true
     } ],
     "externalId" : null,
     "id" : {

@@ -4,7 +4,7 @@
     "additionalInfo" : null,
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "71ca6490-83a4-11f0-8deb-6deff6c18a3b"
     },
     "deviceData" : {
       "configuration" : {
@@ -90,7 +90,58 @@
       "longValue" : 1773524548802,
       "strValue" : null
     } ],
-    "SHARED_SCOPE" : [ ]
+    "SHARED_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : 0.6,
+      "jsonValue" : null,
+      "key" : "xPos",
+      "lastUpdateTs" : 1774339638601,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.9,
+      "jsonValue" : null,
+      "key" : "yPos",
+      "lastUpdateTs" : 1774339651067,
+      "longValue" : null,
+      "strValue" : null
+    } ]
   },
-  "calculatedFields" : [ ]
+  "calculatedFields" : [ {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "A" : {
+          "defaultValue" : "",
+          "refEntityId" : {
+            "entityType" : "DEVICE",
+            "id" : "413f8aa0-18d5-11f1-8efd-f3be4aec29b6"
+          },
+          "refEntityKey" : {
+            "key" : "Energy_consumption",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "A*0.5986",
+      "output" : {
+        "name" : "Co2_Emission",
+        "type" : "TIME_SERIES"
+      },
+      "useLatestTs" : false
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1774252295652,
+      "failuresEnabled" : true
+    },
+    "name" : "Co2_Emission",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "608165c0-81fc-11f0-b4e8-c3dcfa6424a6"
+    },
+    "type" : "SIMPLE"
+  } ]
 }

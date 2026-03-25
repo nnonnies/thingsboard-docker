@@ -6,7 +6,7 @@
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "71ca6490-83a4-11f0-8deb-6deff6c18a3b"
     },
     "deviceData" : {
       "configuration" : {
@@ -69,7 +69,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1773494865926,
+      "lastUpdateTs" : 1773991609501,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -77,41 +77,57 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1773164866983,
-      "longValue" : 1773164866983,
+      "lastUpdateTs" : 1773742368300,
+      "longValue" : 1773742368300,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1773529126180,
-      "longValue" : 1773529124280,
+      "lastUpdateTs" : 1774427215179,
+      "longValue" : 1774427214087,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1773494865925,
-      "longValue" : 1773494865925,
+      "lastUpdateTs" : 1774341686747,
+      "longValue" : 1774341686747,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1773164221177,
-      "longValue" : 1773164221177,
+      "lastUpdateTs" : 1774341282016,
+      "longValue" : 1774341282016,
       "strValue" : null
     } ],
-    "SHARED_SCOPE" : [ ]
+    "SHARED_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : 0.8,
+      "jsonValue" : null,
+      "key" : "xPos",
+      "lastUpdateTs" : 1774256064965,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.4,
+      "jsonValue" : null,
+      "key" : "yPos",
+      "lastUpdateTs" : 1774256093148,
+      "longValue" : null,
+      "strValue" : null
+    } ]
   },
   "calculatedFields" : [ {
     "configuration" : {
       "type" : "SIMPLE",
       "arguments" : {
-        "E_Con" : {
+        "A" : {
           "defaultValue" : "",
           "refEntityId" : {
             "entityType" : "DEVICE",
@@ -123,9 +139,8 @@
           }
         }
       },
-      "expression" : "E_Con*0.5986",
+      "expression" : "A*0.5986",
       "output" : {
-        "decimalsByDefault" : 6,
         "name" : "Co2_Emission",
         "type" : "TIME_SERIES"
       },

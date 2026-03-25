@@ -10,7 +10,7 @@
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "962f14c0-991b-11f0-bc00-9bbeaf642c16"
+      "id" : "71ca6490-83a4-11f0-8deb-6deff6c18a3b"
     },
     "externalId" : null,
     "id" : {
@@ -18,7 +18,7 @@
       "id" : "faa3b4c0-838f-11f0-8deb-6deff6c18a3b"
     },
     "label" : null,
-    "name" : "ตึกพระจอมเกล้าฯ",
+    "name" : "HM KMITL",
     "type" : "Buildings"
   },
   "relations" : [ {
@@ -53,50 +53,66 @@
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
-      "key" : "floors_co2_state",
-      "lastUpdateTs" : 1773529067058,
+      "key" : "buildingImage",
+      "lastUpdateTs" : 1774260406091,
       "longValue" : null,
-      "strValue" : "{\"Floor_1\":0,\"Floor_2\":0}"
+      "strValue" : "/api/images/public/uF28YCcvEgZ3qsyLuGkU7j9msPjkM1sd"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "floors_co2_state",
+      "lastUpdateTs" : 1774427221410,
+      "longValue" : null,
+      "strValue" : "{\"HM_Floor_7\":0.000021044561180000002,\"HM_Floor_1\":0.000021044561180000002}"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "floors_consumption_state",
-      "lastUpdateTs" : 1773529067058,
+      "lastUpdateTs" : 1774427221410,
       "longValue" : null,
-      "strValue" : "{\"Floor_2\":0,\"Floor_1\":0}"
+      "strValue" : "{\"HM_Floor_7\":0.0000351563,\"HM_Floor_1\":0.0000351563}"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "floors_echarge_state",
-      "lastUpdateTs" : 1773529067058,
+      "lastUpdateTs" : 1774427221410,
       "longValue" : null,
-      "strValue" : "{\"Floor_1\":0,\"Floor_2\":0}"
+      "strValue" : "{\"HM_Floor_7\":0.00015820335,\"HM_Floor_1\":0.00015820335}"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "floors_power_state",
-      "lastUpdateTs" : 1773529131509,
+      "lastUpdateTs" : 1774427221301,
       "longValue" : null,
-      "strValue" : "{\"Floor_2\":0.09072322398424149,\"Floor_1\":0.09072322398424149}"
+      "strValue" : "{\"HM_Floor_7\":4.085353374481201,\"HM_Floor_1\":4.085353374481201}"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 13.729034960397131,
+      "doubleValue" : 13.726687424940682,
       "jsonValue" : null,
       "key" : "latitude",
-      "lastUpdateTs" : 1756337601437,
+      "lastUpdateTs" : 1774343471522,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 100.78010694165572,
+      "doubleValue" : 100.77534106137693,
       "jsonValue" : null,
       "key" : "longitude",
-      "lastUpdateTs" : 1756337623907,
+      "lastUpdateTs" : 1774343490720,
       "longValue" : null,
       "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "real_Image",
+      "lastUpdateTs" : 1774337732493,
+      "longValue" : null,
+      "strValue" : "/api/images/public/4hNLb3Fhqiwxk6Z4adQczno093ry34X2"
     } ]
   },
   "calculatedFields" : [ ]

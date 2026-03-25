@@ -64,6 +64,14 @@
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
+      "jsonValue" : "[]",
+      "key" : "inactive_connectors",
+      "lastUpdateTs" : 1774202934862,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
       "lastUpdateTs" : 1771235382640,
@@ -74,27 +82,35 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1773529126180,
-      "longValue" : 1773529124280,
+      "lastUpdateTs" : 1774427233184,
+      "longValue" : 1774427232494,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1771437373244,
-      "longValue" : 1771437373244,
+      "lastUpdateTs" : 1774341672014,
+      "longValue" : 1774341672014,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1771437372661,
-      "longValue" : 1771437372661,
+      "lastUpdateTs" : 1774341652719,
+      "longValue" : 1774341652718,
       "strValue" : null
     } ],
-    "SHARED_SCOPE" : [ ]
+    "SHARED_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[]",
+      "key" : "active_connectors",
+      "lastUpdateTs" : 1774343861742,
+      "longValue" : null,
+      "strValue" : null
+    } ]
   },
   "calculatedFields" : [ ]
 }

@@ -10,7 +10,7 @@
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "71ca6490-83a4-11f0-8deb-6deff6c18a3b"
     },
     "externalId" : null,
     "id" : {
@@ -49,7 +49,31 @@
     "version" : 9852
   } ],
   "attributes" : {
-    "SERVER_SCOPE" : [ ]
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Image",
+      "lastUpdateTs" : 1774255682719,
+      "longValue" : null,
+      "strValue" : "/api/images/public/BsiT2v1dBd0bqdJ8dSEExHwUr6B3yfgZ"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.8,
+      "jsonValue" : null,
+      "key" : "xPos",
+      "lastUpdateTs" : 1774255412745,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.9,
+      "jsonValue" : null,
+      "key" : "yPos",
+      "lastUpdateTs" : 1774255471416,
+      "longValue" : null,
+      "strValue" : null
+    } ]
   },
   "calculatedFields" : [ ]
 }
