@@ -62,33 +62,33 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "floors_co2_state",
-      "lastUpdateTs" : 1774427220323,
+      "lastUpdateTs" : 1775244316896,
       "longValue" : null,
-      "strValue" : "{\"E12_Floor_1\":0.000021044561180000002,\"E12_Floor_3\":0.000021044561180000002}"
+      "strValue" : "{\"E12_Floor_1\":0,\"E12_Floor_3\":0}"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "floors_consumption_state",
-      "lastUpdateTs" : 1774427220323,
+      "lastUpdateTs" : 1775244316896,
       "longValue" : null,
-      "strValue" : "{\"E12_Floor_1\":0.0000351563,\"E12_Floor_3\":0.0000351563}"
+      "strValue" : "{\"E12_Floor_1\":0,\"E12_Floor_3\":0}"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "floors_echarge_state",
-      "lastUpdateTs" : 1774427220323,
+      "lastUpdateTs" : 1775244316896,
       "longValue" : null,
-      "strValue" : "{\"E12_Floor_1\":0.00015820335,\"E12_Floor_3\":0.00015820335}"
+      "strValue" : "{\"E12_Floor_1\":0,\"E12_Floor_3\":0}"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "floors_power_state",
-      "lastUpdateTs" : 1774427220222,
+      "lastUpdateTs" : 1775244477848,
       "longValue" : null,
-      "strValue" : "{\"E12_Floor_1\":4.085353374481201,\"E12_Floor_3\":4.085353374481201}"
+      "strValue" : "{\"E12_Floor_1\":0.0827207937836647,\"E12_Floor_3\":0.0827207937836647}"
     }, {
       "booleanValue" : null,
       "doubleValue" : 13.727633469037013,

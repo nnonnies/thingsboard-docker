@@ -59,18 +59,18 @@
       "strValue" : "/api/images/public/hY6XTi9Wh1Xk8DOtefL01DrC5E3btCy3"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.7,
+      "doubleValue" : 0.6946420701624131,
       "jsonValue" : null,
       "key" : "xPos",
-      "lastUpdateTs" : 1774339132586,
+      "lastUpdateTs" : 1774597585815,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.3,
+      "doubleValue" : 0.2969592049911823,
       "jsonValue" : null,
       "key" : "yPos",
-      "lastUpdateTs" : 1774339148701,
+      "lastUpdateTs" : 1774597585815,
       "longValue" : null,
       "strValue" : null
     } ]
